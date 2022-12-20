@@ -18,7 +18,10 @@ export const {
       gray800: '#212428',
       gray700: '#202024',
       gray300: '#c4c4cc',
-      gray100: '#e1e1e6',
+      gray200: '#e1e1e6',
+      gray100: '#f1f1f1',
+
+      pink900: '#ff014f',
 
       purpleLight: '#DA00FE',
       purpleDark: '#A100ED',

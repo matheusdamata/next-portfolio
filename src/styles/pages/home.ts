@@ -3,10 +3,18 @@ import { keyframes, styled } from '..'
 export const Container = styled('main', {
   width: '100%',
   maxWidth: 1024,
-  height: '100vh',
 
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+})
+
+export const HomeContent = styled('div', {
+  height: 'calc(100vh - 3rem)',
+
+  display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
 })
@@ -16,13 +24,24 @@ export const ProfileImageBorderAnimate = keyframes({
     backgroundColor: 'rgba(252,70,107,1)',
   },
   '50%': {
-    backgroundColor: 'rgba(63,94,251,1)',
+    backgroundColor: 'rgba(213,94,251,1)',
   },
   '75%': {
     backgroundColor: 'rgba(222,44,151,1)',
   },
   '100%': {
     backgroundColor: 'rgba(252,70,107,1)',
+  },
+})
+
+export const ProfileImageAnimate = keyframes({
+  '0%': {
+    transform: 'scaleX(0)',
+    transformOrigin: 'bottom right',
+  },
+  '100%': {
+    transform: 'scaleX(1)',
+    transformOrigin: 'bottom right',
   },
 })
 
@@ -33,18 +52,19 @@ export const ProfileImageContent = styled('div', {
 
   borderRadius: '100%',
 
-  boxShadow: '0px 2px 35px -7px rgba(0,0,0,0.9)',
+  boxShadow: '10px 10px 19px #1c1e22, -10px -10px 19px #262a2e',
 
   animation: `${ProfileImageBorderAnimate} 2s infinite`,
 
   img: {
     borderRadius: '50%',
-    marginRight: '0.5rem',
-    marginBottom: '0.5rem',
+    padding: '0.625rem',
+
+    animation: `${ProfileImageAnimate} .5s ease`,
   },
 })
 
-export const AboutMe = styled('div', {
+export const HomeAboutMe = styled('div', {
   width: 550,
 
   display: 'flex',
@@ -52,12 +72,13 @@ export const AboutMe = styled('div', {
   alignItems: 'flex-start',
   justifyContent: 'center',
 
-  marginLeft: '4rem',
+  marginTop: '3.5rem',
 
   color: '$gray300',
 
   h1: {
-    fontSize: '2.5rem',
+    fontSize: '3rem',
+    fontWeight: 700,
 
     marginTop: '1rem',
   },
@@ -67,15 +88,35 @@ export const AboutMe = styled('div', {
   },
 
   strong: {
-    backgroundImage:
-      '-webkit-linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
-    '-webkit-background-clip': 'text',
-    '-webkit-text-fill-color': 'transparent',
+    color: '$pink900',
   },
 
   p: {
     fontSize: '$md',
 
     marginTop: '1rem',
+  },
+})
+
+export const Socials = styled('div', {
+  width: '100%',
+  height: 150,
+
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'flex-end',
+  justifyContent: 'center',
+
+  gap: '1rem',
+
+  svg: {
+    color: '$pink900',
+  },
+
+  'svg:hover': {
+    transition: 'color .5s ease',
+    color: '$purpleDark',
+
+    transform: 'scale(1.1)',
   },
 })
