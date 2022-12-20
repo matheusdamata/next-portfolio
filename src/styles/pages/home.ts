@@ -1,4 +1,4 @@
-import { styled } from '..'
+import { keyframes, styled } from '..'
 
 export const Container = styled('main', {
   width: '100%',
@@ -11,6 +11,21 @@ export const Container = styled('main', {
   justifyContent: 'center',
 })
 
+export const ProfileImageBorderAnimate = keyframes({
+  '0%': {
+    backgroundColor: 'rgba(252,70,107,1)',
+  },
+  '50%': {
+    backgroundColor: 'rgba(63,94,251,1)',
+  },
+  '75%': {
+    backgroundColor: 'rgba(222,44,151,1)',
+  },
+  '100%': {
+    backgroundColor: 'rgba(252,70,107,1)',
+  },
+})
+
 export const ProfileImageContent = styled('div', {
   display: 'flex',
   alignItems: 'center',
@@ -18,10 +33,9 @@ export const ProfileImageContent = styled('div', {
 
   borderRadius: '100%',
 
-  background:
-    'linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)',
-
   boxShadow: '0px 2px 35px -7px rgba(0,0,0,0.9)',
+
+  animation: `${ProfileImageBorderAnimate} 2s infinite`,
 
   img: {
     borderRadius: '50%',
