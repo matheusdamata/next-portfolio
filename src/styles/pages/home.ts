@@ -111,6 +111,7 @@ export const Socials = styled('div', {
 
   svg: {
     color: '$pink900',
+    cursor: 'pointer',
   },
 
   'svg:hover': {

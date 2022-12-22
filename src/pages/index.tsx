@@ -10,7 +10,7 @@ import {
 } from '../styles/pages/home'
 
 import ProfileImage from '../assets/profile.svg'
-import { AboutMe } from './aboutme'
+import { AboutMe } from './AboutMe'
 import { DividingLine } from '../components/DividingLine'
 import { LinkedinLogo, GithubLogo, Envelope } from 'phosphor-react'
 
@@ -41,7 +41,7 @@ export default function Home() {
           </HomeAboutMe>
 
           <Socials>
-            <LinkedinLogo  size={32} weight="duotone" />
+            <LinkedinLogo size={32} weight="duotone" />
             <GithubLogo size={32} weight="duotone" />
             <Envelope size={32} weight="duotone" />
           </Socials>

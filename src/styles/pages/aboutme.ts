@@ -7,6 +7,7 @@ export const Container = styled('div', {
 
   display: 'flex',
   flexDirection: 'column',
+  textAlign: 'center',
 
   span: {
     fontSize: '1rem',
@@ -15,5 +16,28 @@ export const Container = styled('div', {
 
   h1: {
     fontSize: '$2xl',
+  },
+})
+
+export const Content = styled('div', {
+  borderRadius: '0.75rem',
+
+  textAlign: 'left',
+  lineHeight: '1.5',
+
+  padding: '2rem',
+  margin: '2rem 0',
+
+  backgroundColor: '$gray800',
+  boxShadow: '10px 10px 19px #1c1e22, -10px -10px 19px #262a2e',
+
+  a: {
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    color: '$pink900',
+  },
+
+  strong: {
+    color: '$pink900',
   },
 })
