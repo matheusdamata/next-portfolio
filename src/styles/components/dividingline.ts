@@ -4,7 +4,7 @@ export const Line = styled('span', {
   height: 1,
   width: '100%',
 
-  margin: '0 0 2rem',
+  margin: '2rem 0',
 
   background: '$gray900',
 })

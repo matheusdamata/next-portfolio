@@ -3,7 +3,7 @@ import { styled } from '..'
 export const Container = styled('div', {
   width: '100%',
   maxWidth: 1024,
-  height: '100vh',
+  height: '100%',
 
   display: 'flex',
   flexDirection: 'column',
